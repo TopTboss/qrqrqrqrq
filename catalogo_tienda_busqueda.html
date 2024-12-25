@@ -1,0 +1,5339 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #searchBox {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Productos</h1>
+
+    <!-- Campo de búsqueda -->
+    <input type="text" id="searchBox" onkeyup="searchProduct()" placeholder="Buscar productos...">
+
+    <table id="productTable">
+        <tr>
+            <th>Item</th>
+            <th>Costo</th>
+        </tr>
+
+        <tr>
+            <td>ACCESORIO BAÑERA BB SOLIDO - POLINPLAST</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>ACE 2KG</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>ACEITE OIL CHICO ECONÓMICO</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>ACEITE OIL GRANDE ECONÓMICO</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>ACOPLE DE PVC 1/2" BLANCO ROSSI - MIRALDI</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>ADOQUINERA POLIN MIX ICE BLANCO X 2 UNIDADES - POLINPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>AGUJA</td>
+            <td>0.3</td>
+        </tr>
+    
+        <tr>
+            <td>ALAMBRE GALVANIZADO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO (SBB1) 5/16 X 21/2"</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO (SBB2) 5/16 X 31/2"</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO (SBB3) 5/16 X 41/2"</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO 3/8 X 4.1/2"</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO 3/8 X 5.1/2"</td>
+            <td>4.5</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO 3/8 X 6.1/2"</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALASKA CERROJO SANSONSITO 3/8 X 7.1/2"</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALCAYATA CEMENTO CAJA X 1/2 KG. 1.1/2 - CFDA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALCAYATA CEMENTO CAJA X 1/2 KG.G 2" - CFDA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALCOHOL 70g</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALCOHOL MEDICINAL DE 70°</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALFOMBRA LUMINOSA 40*60CM - BUY&GO</td>
+            <td>11.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALICATE UNIVERSAL 8" No.D15 UY - UYUSTOOLS</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>ALMOHADA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>ANGULO ACERO ZINCADO 1.1/2X1.1/2N- CFDA</td>
+            <td>34.0</td>
+        </tr>
+    
+        <tr>
+            <td>ANTENA BASE ELEFANTE FULL HD PACIFICO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>AQUA BALDE 20 LITROS CON ASA METAL - LUCKY HOME</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARGOLLA P/CORTINA MEDIANO T/PERA - CFDA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>AROS UNICORNIO ROLY POLY - BASA</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA DE 2 METROS DE ANCHO</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA DE 3 METROS DE ANCHO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA DE 4 METROS DE ANCHO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA X 2 METROS DE ANCHO</td>
+            <td>450.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA X 3 METROS DE ANCHO</td>
+            <td>650.0</td>
+        </tr>
+    
+        <tr>
+            <td>ARPILLERA DE RAFIA X 4 METROS DE ANCHO</td>
+            <td>1350.0</td>
+        </tr>
+    
+        <tr>
+            <td>ASADERA ACERO LIVIANA #1 - ROMSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ASADERA ACERO LIVIANA #2 - ROMSA</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>ASADERA ACERO LIVIANA #3 - ROMSA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>ASPERSOR PVC METAL WINGS</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>ATOMIZADOR FCO PET X 120 ML BLANCO</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>ATOMIZADOR FCO PET X 30 ML BLANCO</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>ATOMIZADOR FCO PET X 60 ML BLANCO</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>AZUCARERO - COASPA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>AZUCARERO ACERO GRANDE C/B - ROMSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>AZUCARERO ACERO MEDIANO C/B - ROMSA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>BACIN ANATOMICO AMARILLO/ROJO - DURAPLAST</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>BACIN ANATOMICO LILA/ROSADO - DURAPLAST</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>BACIN CHICO - MAGINSA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALANZA 20KG METAL , C/PLATO KAZO - POWER ACOUSTIK</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALANZA 40KG S/TORRE C/PLATO T, TECLADO METAL  KAZO - POWER ACOUSTIK</td>
+            <td>135.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALANZA 600 KG ANTIDESLIZANTE C/DOBLE PANTALLA KAZO - POWER ACOUSTIK</td>
+            <td>415.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 10 LT COMERCIAL C/TAPA COLOR - POLINPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 13 LT COLOR Y TRANSPARENTE CON TAPA - GREEN PLASTIC</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 16 LT COMERCIAL NEW TRANSPARENTE C/TAPA COLOR C/ASA DE METAL - POLINPLAST</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 2 GL MODERNO COLORESS C/TAPA - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 20 LT COMERCIAL TRANSPARENTE C/TAPA COLOR C/ASA DE METAL - POLINPLAST</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 3.5 LT COLOR Y TRANSPARENTE CON TAPA - GREEN PLASTIC</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE 8LT COLOR Y TRANSPARENTE CON TAPA - GREEN PLASTIC</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE ADONAI CON TAPA N° 25 - MAGINSA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE BASA COMERCIAL 20L - BASA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE COLOR 4 LTS. CON TAPA - MAGINSA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE COLOR 6 LTS. CON TAPA - MAGINSA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE CON TRAPEADOR</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE DE 16 L - POLINPLAST</td>
+            <td>21.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE DE 20 L CON CAÑO - BASA</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE DE 8 L COLOR ENTERO - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE DE 8 L COMERCIAL TRANSPARENTE C/TAPA COLOR - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE DE 8 L CON CAÑO - POLINPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE JOY 13 L - BASA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE KM 13 - DURAPLAST</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE OPTIMUS 12LT - WMB</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE OPTIMUS 4LT - WMB</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE OPTIMUS 8LT - WMB</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE SUPER JOY 17 L - BASA</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE TRANSP. 16 LTS. CON TAPA - MAGINSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE TRANSPARENTE 4 LTS. CON TAPA - MAGINSA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALDE TRANSPARENTE 6 LTS. CON TAPA - MAGINSA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>BALONES DE GAS CON CONTENIDO</td>
+            <td>145.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO DAVID MODELO RATAN - MAGINSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO EMOJI STOOL CHICO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO GORDITA - PROLIMSO</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO MARGARITO PODEROSO AZUL - DURAPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO MARGARITO PODEROSO GUINDA - DURAPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO MARGARITO PODEROSO NEGRO - DURAPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO MARGARITO PODEROSO VERDE - DURAPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO RATAN DUBAI - HERCUPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BANCO SUPER NAZCA - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>BAÑERA MEGABAÑERA DELUXE SOLIDA - POLINPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA ARCA DE NOE #110 - MAGINSA</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA BARQUITA #10 - KOSMO PLAST</td>
+            <td>4.5</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA BEGONIA 40 LTS C/JABONERAS-SEMI - URPI</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA CANOA N° 20 - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA CANOA N° 30 - POLINPLAST</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA CANOA N° 40 - POLINPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA CANOA N° 50 - POLINPLAST</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA DOMY N° 20 - MAGINSA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA GARDENIA 40 LTS C/ASAS JABONERA Y PICO-SEMI - URPI</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA MARGARITA #10 - KOSMO PLAST</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA MOISES DE 10 LT - PLASTICOS SANTA CRUZ</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA MOISES DE 15 LT. - PLASTICOS SANTA CRUZ</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA MOISES DE 20 LT - PLASTICOS SANTA CRUZ</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA NAZCA N° 28 - MAGINSA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BATEA PRIMICIA 35 LTS. - MAGINSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BIDON 80.LT. (PEAD) ECOPLAST - BASA</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>BIDON DE 36 GLN - CID PLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>BIDON DE 56 GLN - CID PLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>BIDON DE 67.5 LT. (PEAD) ECOPLAST - BASA</td>
+            <td>78.0</td>
+        </tr>
+    
+        <tr>
+            <td>BISAGRA 4" 100X70X1.8MM - BUY&GO</td>
+            <td>4.5</td>
+        </tr>
+    
+        <tr>
+            <td>BISAGRAS 3" 75X47X1.5MM - BUY&GO</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLO 8 LISO BLANCO</td>
+            <td>80.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLO ACERO #14 - ROMSA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLO ACERO #16 - ROMSA</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLO ACERO #18 - ROMSA</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLOS BUEN HOGAR JGO X 4 - BASA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE BASURA 20X30</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE DORMIR</td>
+            <td>90.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE MERCADO</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILEBO CON ASA 21" X 24"</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 10 X 15</td>
+            <td>96.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 2 X 2</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 2 X 3</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 2.5 X 2.5</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 3 X 3</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 5 X 10</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 6 X 10</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO 8 X 12</td>
+            <td>56.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO COLOR BLANCO CON ASA 16" X 19"</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO COLOR NEGRO 20" x 30"</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO COLOR ROJO 20" X 30"</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIETILENO CON ASA 21" X 24"</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIPROPILENO 10 X 15 X 1</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA DE POLIPROPILENO 5" x 10" x 1</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA POLIETILENO 20X30</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA POLIETILENO MARANATHA 20X30, AZUL</td>
+            <td>12.5</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSA POLIETILENO NEVADO BLANCO 20X30</td>
+            <td>12.5</td>
+        </tr>
+    
+        <tr>
+            <td>BOLSAS POLIETILENO, EL BRILLO DEL OSITO 11X16</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOMBA DE ACEITE GIRATORIA 25MM - BUY&GO</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOMBA DE ACEITE GIRATORIA 32MM - BUY&GO</td>
+            <td>145.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER AZUL/GRIS T-38 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER AZUL/GRIS T-39 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER BLANCO T-38 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER BLANCO T-39 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER ROSADO/LILA T-38 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC CAÑA CORTA LANCER ROSADO/LILA T-39 - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC ECONOMICA XTREME NEGRO/AMARILLO T/38 - MIRALDI</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTA PVC ECONOMICA XTREME NEGRO/AMARILLO T/39 - MIRALDI</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA CANTIMPLORA TRITEX 1.0 L. - BASA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA CANTIMPLORA TRITEX 1.4 L. - BASA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA CANTIMPLORA TRITEX 1.5 L. CON ASA - BASA</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA DECANTER BCLEAR 1.6 L - BASA</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA FLIPER 800 ML GYG - BASA</td>
+            <td>21.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA FLIPER 950 ML GYG - BASA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA GRAND TRITEX 1.5 L - BASA</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA GRAND TRITEX 1.9 L - BASA</td>
+            <td>34.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA GYG TRITAN FLIP TOP 500 ML - BASA</td>
+            <td>21.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA POT TRITEX 1.2 L - BASA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA SPIRIT TRITEX 850 ML - BASA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA TRITAN CANTIMPLORA DE 1.3 L - BASA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLA TRITAN FLIPPER DE 520 ml - BASA</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTELLAS DE VINO</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTIQUIN CARTONPLAST PRIMEROS AUXILIOS CON MEDICINAS S/MARCA - MIRALDI</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTIQUIN PLASTICO CON MEDICINAS 21X21X8CM - MIRALDI</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>BOTIQUIN PLASTICO CON MEDICINAS 30X20X9CM - MIRALDI</td>
+            <td>46.0</td>
+        </tr>
+    
+        <tr>
+            <td>BREA DURA C/E - PINO QUÍMICA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 1/2" - INSAF</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 1/8" - INSAF</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 5/16" - INSAF</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 5/32" - INSAF</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 7/16" - INSAF</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS CILINDRICAS HSS 7/64" - INSAF</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS PARA CONCRETO 1/4" (6.0x100 mm) - INSAF</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS PARA CONCRETO 3/8" (10.0x120 mm) - INSAF</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>BROCAS PARA CONCRETO 5/16" (8.0x110 mm) - INSAF</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZÓN AHORRA ESPACIO #20 C/PEDAL - POLINPLAST</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 AZUL ITALIA - DURPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 GRANITO - DURAPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 MARFIL - DURAPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 NEGRO - DURAPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 ROJO - DURAPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>BUZON CLASICO 10 VERDE TELEFONICA - DURAPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CABEZAL DE CAÑO NACIONAL</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>CABLE ACERO FORRADO PVC VERDE - CFDA</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>CABLE ACERO PASACABLE 20MTS. NACIONAL - CFDA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>CABLE DE INTERNET</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>CABLE EXTENCIÓN C/E TOMAS-3M-10A UYU - UYUSTOOLS</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1 LT OVAL - ROMSA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1 LT RECTA - ROMSA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1/2 LT OVAL - ROMSA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1/2 LT RECTA - ROMSA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1/4 LT OVAL - ROMSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAFETERA ACERO 1/4 LT RECTA - ROMSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA CONSERVADORA # 5 - BASA</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA CONSERVADORA # 6 - BASA</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA CONSERVADORA # 7 - BASA</td>
+            <td>21.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA CONSERVADORA FREEZER #3 - BASA</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA COSECHERA BLINDADA # 1 ECOFORTEX (PEAD) - BASA</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA COSECHERA PREMIUM DE CAMPAÑA - POLINPLAST</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA DE TECNOPOR N°563 / 41.5x33x24 -FORU</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA DE TECNOPOR N°568 / 29x24.5x24 - FORU</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA DE TECNOPOR N°576 / 40x28x23 - FORU</td>
+            <td>27.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA MULTIBOX N° 20 (11 DIVISIONES) - POLINPLAST</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA MULTIBOX N° 30 (11 DIVISIONES) - POLINPLAST</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA OPTIMUS N°6 CON BANDEJA</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA ORGANIZADORA UTILISIMA ALTA 12 LT - BASA</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA ORGANIZADORA UTILISIMA ALTA 19 LT - BASA</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA ORGANIZADORA UTILISIMA BAJA 17 LITROS - BASA</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA ORGANIZADORA UTILISIMA BAJA 28 LT - BASA</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA URPI #110 - URPI PLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAJA URPI #90 - URPI PLAST</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAMILLA PLASTICA RIGIDA 350</td>
+            <td>260.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANASTILLA MULTIUSOS #10 - URPI</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANASTILLA MULTIUSOS #20 - URPI</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F20 - FORTE</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F25 - FORTE</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F30 - FORTE</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F40 - FORTE</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F50 - FORTE</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F60 - FORTE</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>CANDADO FORTE SIN 8 F70 - FORTE</td>
+            <td>78.0</td>
+        </tr>
+    
+        <tr>
+            <td>CAÑO BOTADERO PUNTO AZUL NACIONAL</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>CARPA DE 4 PERSONAS KLIMBER</td>
+            <td>150.0</td>
+        </tr>
+    
+        <tr>
+            <td>CARPA IGLÚ PARA 2 PERSONAS</td>
+            <td>120.0</td>
+        </tr>
+    
+        <tr>
+            <td>CARPETA DIDACTICA DECORA NIÑA - POLINPLAST</td>
+            <td>106.0</td>
+        </tr>
+    
+        <tr>
+            <td>CARPETA DIDACTICA DECORA NIÑO - POLINPLAST</td>
+            <td>106.0</td>
+        </tr>
+    
+        <tr>
+            <td>CENICERO ACERO - ROMSA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>CEREALBAR ARANDANO X 18 GR.</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>CERR. FORTE CALIFORNIA 1040 DORADA - FORTE</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>CERR. FORTE CLÁSICA 240 DORADA - FORTE</td>
+            <td>86.0</td>
+        </tr>
+    
+        <tr>
+            <td>CERR. FORTE CLÁSICA 240 NEGRA - FORTE</td>
+            <td>86.0</td>
+        </tr>
+    
+        <tr>
+            <td>CERR. FORTE ESCRITORIO 555F - FORTE</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>CERR. FORTE ESTÁNDAR F114 C/J DORADA - FORTE</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA AVANTE ESTANDAR -JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA MULTIBOX 30 C/TAPA (PT) TRANSPARENTE ACERO CLARO - MAGICPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA MULTIBOX 30 C/TAPA (PT) TRANSPARENTE CREMA - MAGICPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA MULTIBOX 30 C/TAPA (PT) TRANSPARENTE NARANJA - MAGICPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA MULTIBOX 30 C/TAPA (PT) TRANSPARENTE ROJO - MAGICPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTA MULTIBOX 30 C/TAPA (PT) TRANSPARENTE VERDE LIMON - MAGICPLAST</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO DUBAI GRANDE - POLINPLAST</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO DUBAI MEGA - POLINPLAST</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO EBENEZER CON TAPA Y ASA - MAGINSA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO JERUSALEN MODELO RATÁN - MAGINSA</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO PRAXIS - LUCKY HOME</td>
+            <td>27.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO RATÁN GRANDE ALEMANA - PROLIMSO</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO RATÁN GRANDE SURTIDO - PROLIMSO</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO RATTAN N°3 C/TAPA CAFE MOCCA - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>CESTO VICTORIA MODELO RATAN - MAGINSA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>CHATA - BLUE IMP.</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>CHECK SWING HORIZONTAL 1/2" VALMAX</td>
+            <td>29.5</td>
+        </tr>
+    
+        <tr>
+            <td>CHICHARRA 19 CM</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CHIFERO GRANDE N° 17B - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>CHIFERO GRANDE SM 18 CUADRADO - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>CHIFERO SUPER BOWL N° 18B - MELAFORM</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA DE EMBALAJE 80 YARDAS X 48 MM X 40 MIC - PG</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA DE SEÑALIZACIÓN AMARILLO PELIGRO OBRAS S/MARCA - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA DE SEÑALIZACIÓN ROJA PELIGRO OBRAS S/MARCA - MIRALDI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA EMBAL 2"X70 YD (66MT) TRANSP YIMI - (TL)</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA EMBALAJE GRANDE</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 06"</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 09"</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 12"</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 15"</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 18"</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>CINTA STRETCH FILM DE 20"</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>CLAVO CEMENTO CAJA 1/2 KG. 1.1/2 - CFDA</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>CLAVO CEMENTO CAJA X 1/2 KG. 1" - CFDA</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCHE DE MERCADO C/BOLSA COLORES</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCHESITO DE MERCADO</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA A GAS DE 2 HORNILLAS</td>
+            <td>73.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA CRISTAL 2H DOM. MESA ACERO C/T</td>
+            <td>78.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA CRISTAL 2H DOM. MESA ACERO S/T</td>
+            <td>68.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA DE 3H - SURGE</td>
+            <td>175.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA GALA 4H DOM. PIE COLOR C/RESP. Y PEDESTAL</td>
+            <td>225.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL CAMILA 3H #4 PIE Q/AL P/DES P/ACERO</td>
+            <td>235.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL CANDY 1H #4 MESA Q/AL P/FIJ P/ACERO</td>
+            <td>58.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL CANDY 2H #4 MESA Q/AL P/FIJA P/ACERO</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL CANDY 2H #4 PIE Q/AL P/FIJA P/ACERO</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL CANDY 3H #4 PIE Q/AL P/FIJA P/ACERO</td>
+            <td>186.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA INDUSTRIAL DE 3H - GRIFE</td>
+            <td>360.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA UCAYALI 2H DOM. MESA ESMALT. T/VIDRIO</td>
+            <td>135.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCINA VANIA 2H DOM. MESA COLOR C/TAPA Y FRONTAL ACERO</td>
+            <td>138.0</td>
+        </tr>
+    
+        <tr>
+            <td>COCTELERA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLA SINTETICA CLÁSICA 1/4 KG - QUIMVA</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR ACERO FILO REFORZADO 16CM - ROMSA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR ACERO FILO REFORZADO 18CM - ROMSA</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR ACERO FILO REFORZADO 20CM - ROMSA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR ACERO FILO REFORZADO 24CM - ROMSA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR POLIN - POLINPLAST</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLADOR SUPER JUMBO - BASA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 1 PLAZA 4" - KARMONT</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 1.5 PLAZAS 4" - KARMONT</td>
+            <td>90.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 1.5 PLAZAS 5.5" - KARMONT</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 1.5 PLAZAS 7" - KARMONT</td>
+            <td>135.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 1.5 PLAZAS 8" - KARMONT</td>
+            <td>145.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 2 PLAZAS 4" - KARMONT</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 2 PLAZAS 5.5" - KARMONT</td>
+            <td>135.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 2 PLAZAS 7" - KARMONT</td>
+            <td>165.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON ESPUMA LIVERPOOL K12 2 PLAZAS 8" - KARMONT</td>
+            <td>185.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON INFLABLE 191*99*22 CM</td>
+            <td>95.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLCHON INFLABLE DE 2 PLAZAS - KLIMBER</td>
+            <td>100.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR ADULTO ECONOMICO (PARA ROPA) - DAYR</td>
+            <td>0.5</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR ADULTO NEW CLASICO X 12 - POLINPLAST</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR ADULTO PRIMERA (PARA ROPA) - DAYR</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR DE ROPA NIÑO NEW X 12 COLORES - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR DE SEGUNDA - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR ECONOMICO PARA ROPA - PROLIMSO</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR MULTIPLE TREBOL /18 PINZAS - COASPA</td>
+            <td>11.0</td>
+        </tr>
+    
+        <tr>
+            <td>COLGADOR OVALADO - COASPA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMBA OCTAGONAL MANGO MADERA 3LB - BUY&GO</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMBA OCTAGONAL MANGO MADERA 4LB - BUY&GO</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) ACERO CREMA - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) FRESA - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) FUCSIA LILA - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) GRIS ROSADO - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA CABITRAN X6 (PT) TAUPE - MAGICPLAST</td>
+            <td>210.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA JUMBO BOX X6 (PT) ACERO GRIS - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA JUMBO BOX X6 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA JUMBO BOX X6 (PT) CELESTE MARMOL - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA JUMBO BOX X6 (PT) FRESA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA JUMBO BOX X6 (PT) MARRON CREMA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) ACERO GRIS - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) CAFE BEIGE - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) FRESA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) FRESA - MAICPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) GRIS ROSADO - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMODA MITRAN BOX X6 (PT) MARRON CREMA - MAGICPLAST</td>
+            <td>270.0</td>
+        </tr>
+    
+        <tr>
+            <td>COMPRESOR 8L x 1HP PE-UYU - UYUSTOOLS</td>
+            <td>535.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONDIMENTERO 651859 - YANG</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONDIMENTERO 652474 - YANG</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONDIMENTERO 652544 - YANG</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONTAINER POLIN #4 - POLINPLAST</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONTAINER POLIN #6 - POLINPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONTENEDOR BB CLICK 360 ML</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONTENEDOR FOODIE 10.5 L - BASA</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>CONTENEDOR FOODIE 22 L - BASA</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YCEPRO 15 QT-BASA</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YCEPRO 21 QT-BASA</td>
+            <td>120.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YCEPRO 36QT - BASA</td>
+            <td>155.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YCEPRO 9 QT-BASA</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YCEPRO JR. 5QT - BASA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 15 QT - BASA</td>
+            <td>95.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 21 QT - BASA</td>
+            <td>125.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 31 QT C/RUEDA Y ASA TELESCÓPICA - BASA</td>
+            <td>266.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 56 QT - BASA</td>
+            <td>248.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 63 QT C/RUEDAS Y ASA TELESCÓPICA - BASA</td>
+            <td>320.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI 9 QT - BASA</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>COOLER YETI JR. 5QT - BASA</td>
+            <td>46.0</td>
+        </tr>
+    
+        <tr>
+            <td>COPA 61.5*65*151MM / 180ML - BUY&GO</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>COPA VINO 503 - GALESS EXPRES</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>COPA VINO 5435AL24</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>CORDEL DE ALGODON # 24 1 KG APROX. - CFDA</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>CORTINA DE BAÑO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CORTINA DE TELA POLIÉSTER 140*240*CM - BUY&GO</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>CORTINERO ALUMINIO 1.5MTS. APROX. - CFDA</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>CORTINERO ALUMINIO 2MTS APROX. - CFDA</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>COSTAL DE RAFIA DE 50 KILOS</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBETAS DE HIELO C/BLANCO (SET X 2 PZAS.) - COASPA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PLAIN PVC DELIFRUTA MIX - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PLAIN PVC LIDIA BLANCO - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PLAIN PVC MIX FRUTAL - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PVC BRENDA LIMON 94 - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PVC BRENDA MOSTAZA 38 - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PVC NOHEMI CELESTE 13 - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA PVC SELENA LILA 40 - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA TRANSP PVC ADA AZUL - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA TRANSP PVC ARIANNA FUCSIA - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUBREMESA TRANSP PVC JULIETA BLANCO - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHARA ARROCERA - BLUE IMP.</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHARA DESCARTABLE PEQUEÑA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHARA HOTELERO 111 ECONOMICO</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHARON DE CEREALES - PAISANA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHILLA DE 6 ASPAS , OSTER DE LICUADORA</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHILLO SERRUCHO IMPORTADO COLORES</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHILLO TIPO MACHETE DE COCINA 7" (MANGO COLOR NEGRO) - BUY&GO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUCHILLO TIPO MACHETE DE COCINA 7" (MANGO DE ACERO) - BUY&GO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>CUENCO DE CERÁMICA 6.25" - BUY&GO</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>DELANTAL 80*70CM A RAYAS - BUY&GO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESATORADOR</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESATORADOR DE BAÑO TIRABUZON, MANGO BARNIZADO - PROLIMSO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESATORADOR DE LAVADERO LUXY - BASA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO NAPOLITANO - POLINPLAST</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO RATAN ELEGANTE POR 3 NIVELES - HERCUPLAST</td>
+            <td>51.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO RATAN ELEGANTE POR 4 NIVELES - HERCUPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO RATAN ELEGANTE POR 5 NIVELES - HERCUPLAST</td>
+            <td>70.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO RATAN MULTIUSO BORA POR 4 NIVELES - HERCUPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>DESPENSERO VENECIA - POLINPLAST</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>DETERGENTE A GRANEL</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>DISCO CORTE DE MADERA 7" 1/4 40T</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>DISCO CORTE DE MADERA 7" 1/4 60T</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>DISCO DE CORTE ACERO 14" 355*3*25.4 - BUY&GO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>DRIZA BLANCA 1" - CFDA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>DRIZA BLANCA 3/4 - CFDA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>DRIZA BLANCA 5/8 - CFDA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>DUCHA ELECTRICA MOD. PLUS, OVNI - INSAF</td>
+            <td>67.0</td>
+        </tr>
+    
+        <tr>
+            <td>DULCERA DE VIDRIO - PG</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>DURAMESA GRANDE - BLANCO - DURAPLAST</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>DURASILLA ELEGANTE - NEGRO- DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ELECTRODO E6011 1/8" UYUS - UYUSTOOLS</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>EMBUDO #4 - COASPA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>EMBUDO #5 - COASPA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>EMBUDO N° 5 - CID PLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENCHUFE MULTIPLE CREMA - PARMA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENGRASADORA PICO FLEXIBLE 15 ONZ. "C&A" - PERSA</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENVASE SALSERO COMERCIAL 1100 ML - BASA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENVASE SALSERO COMERCIAL 480ML - BASA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENVASE SALSERO COMERCIAL 630 ML / 21 OZ - BASA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ENVASE SALSERO COMERCIAL 880 ML - BASA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA BARBARITA, MANGO FORRADO CHINO - PROLIMSO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA CANDY, MANGO FORRADO CHINO - PROLIMSO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA DE NYLON "GORDITA" - PROLIMSO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA INSTITUCIONAL #50 - PISOS DELICADOS - DAYR</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA INSTITUCIONAL #60 - PISOS DELICADOS - DAYR</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA ITALIANA</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA MARGARITO, MANGO METALICO - PROLIMSO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBA MIGUELON DE NYLON, MANGO METALICO - PROLIMSO</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA BALDEADOR CON JEBE, MANGO FORRADO CHINO - PROLIMSO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA BLANQUITA - PROLIMSO</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA CERDA 60 CM - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA DE PISOS LUXY - BASA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA DE ROPA CON CINTURA - PROLIMSO</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA PARA BOTELLA LUXY CON ESPONJA - BASA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA PARA BOTELLAS LUXY - BASA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCOBILLA PLANA DOÑA BARBARA - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCURRIDOR AVANTE TRASLÚCIDO - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCURRIDOR BUEN HOGAR JUMBO - BASA</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCURRIDOR BUENHOGAR 14PL - BASA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESCURRIDOR VELOZ - COASPA</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>ESMERIL 1/3 HP DEREK MOTORS - POWER ACOUSTIK</td>
+            <td>185.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPATULA ACERO CHICA - ROMSA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPATULA ACERO GRANDE - ROMSA</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPATULA ACERO MEDIANA - ROMSA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPUMA DE POLIURETANO 500ML KNAUF - PERSA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPUMADERA ACERO CHICA - ROMSA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESPUMADERA ACERO MEDIANA - ROMSA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESQUINERO CALADO TERESITA X 4 NIVELES - URPI PLAST</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>ESTANTE SOFÍA GRANDE N° 50 - LUCKY HOME</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>EXPRIMIDOR DE LIMON POLIN - POLINPLAST</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>EXTENSION ELECT. 15M VULC. C/LED AMARILLO STARLIGHT - MIRALDI</td>
+            <td>46.0</td>
+        </tr>
+    
+        <tr>
+            <td>FAJA DE PROTECCION LUMBAR T/L HUNO - MIRALDI</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>FAJA DE PROTECCION LUMBAR T/M HUNO - MIRALDI</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>FLAN DE VAINILLA TRADICIONAL - CORP. BUENA VENTURA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>FLORERO ECONOMICO (AGRANEL) DE VIDRIO -GEX</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>FLORERO PEQUEÑO DE VIDRIO</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>FLORIDA FILETE ATUN 110kcal AG/SAL A/F 150GR</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>FOCO LED PORTATIL TIPO BOTELLA CON CONEXIÓN USB RECARGABLE - ENCENDIDO 3 TIEMPOS DE 50W</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>FRACSO DE VIDRIO C/T 1.7 LT (111)</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>franelas</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>FRASCO DE VIDRIO C/T 1.2 LT (111)</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>FRASCO DE VIDRIO C/T 2 LT (111)</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>FUENTE DE VIDRIO MARINEX 3.5 LT</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>FUENTE FAMILIAR COLORES NEW - POLINPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>FUENTE FAMILIAR TRANSPARENTE NEW - POLINPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>GANCHO TRUPAN DE 20</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>GANCHO TRUPAN DE 25</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>GANCHOS CUCHARITA - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) ACERO CREMA - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) FRESA - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) MARRON CREMA - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) PAYASITO CLASICO - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X2 (PT) VERDE OLIVO - MAGICPLAST</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) ACERO CREMA - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) CELESTE MARMOL - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) FRESA - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) GRIS ROSADO - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X3 (PT) MARRON CREMA - MAGICPLAST</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) ACERO CREMA -MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) BARBIE FUCSIA - MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) CELESTE MARMOL - MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) FRESA - MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) GRIS ROSADO - MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GAVETERO MAGIC X4 (PT) MARRON CREMA - MAGICPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>GELATINA DE FRESA TRADICION BV / 200GR - CORP. BUENA VENTURA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>GELATINA DE NARANJA TRADICIÓN BV /200GR - CORP. BUENA VENTURA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>GELATINA DE PIÑA TRADICIÓN BV /200GR - CORP. BUENA VENTURA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>GLINA MAXI MANI X 18 GR.</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>GLOBOS DE HULE N° 270 PENCIL - PAYASO</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>GLOBOS DE HULE N° 7 - PAYASO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>GRAPA PLASTICA REDONDO BLANCO 10 MM (BLSX100) FULGORE - MIRALDI</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>GRAPA PLASTICA REDONDO BLANCO 8 MM (BLSX100) FULGORE - MIRALDI</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE CORRUGADO M CLASICA</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DKASA CORRUGADO L (9-9 1/2)</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DKASA CORRUGADO S (7-7 1/2)</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DKS CORRUGADO PLUS ROJO M (8-8 1/2)</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DOMESTICO TALLA L</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DOMESTICO TALLA M</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE DOMESTICO TALLA S</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTE NYLON NEGRO PALMA PU T/9 SICUREX 10409003 - MIRALDI</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>GUANTES DE JEBE</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>HACHA CON MANGO ANTIDESLIZANTE 800G - BUY&GO</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR - GALESS EXPRESS</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR (GALERY)</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR (USA)</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR CLASSIC MAX INALAMBRICO BASA 1.7 L - BASA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR CONFORT INALÁMBRICO BASA 1.7 L - BASA</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDOR CURVE STYLE INALAMBRICO 1.7L- BASA</td>
+            <td>58.0</td>
+        </tr>
+    
+        <tr>
+            <td>HERVIDORA ELECTRICA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.25 - CFDA</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.30 - CFDA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.40 - CFDA</td>
+            <td>6.5</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.50 - CFDA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.60 - CFDA</td>
+            <td>11.5</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.70 - CFDA</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.80 - CFDA</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 0.90 - CFDA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>HILO DE PESCAR NYLON BLANCO 1.00 - CFDA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>HIPOCLORITO CALCIO GRANULADO 70% C/E COD.ONU: UN 1748 CL.5.1 - PINO QUÍMICA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO DE BAÑO LUXY - BASA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO DE BAÑO LUXY TRIANGULAR - BASA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO DE SANITARIO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO ESQUINERO CON BASE - PROLIMSO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO REDONDO CON BASE - PROLIMSO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO ROSITA CON BASE X 60 - PROLIMSO</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>HISOPO SANITARIO - BASA</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>HUINCHA CON MANGO 100M - UYUSTOOLS</td>
+            <td>49.0</td>
+        </tr>
+    
+        <tr>
+            <td>HUINCHA CON MANGO 50M - UYUSTOOLS</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>HULE DE MESA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>HULE PARA MESA CON DISEÑO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>INFLADOR DE COLCHON *30 INTEX</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>INGLES ASFALTO RC-250 (4,545956L)</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>INTERRUPTOR CONMUTACION SIMPLE PLACA ULTRA W 1100 - 3W - PARMA</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>INTERRUPTOR DOBLE PLACA OVAL ULTRA W 1200 - PARMA</td>
+            <td>4.5</td>
+        </tr>
+    
+        <tr>
+            <td>INTERRUPTOR SIMPLE PLACA OVAL ULTRA W 1100 - PARMA</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>INTERRUPTOR SOBRE PONER SIMPLE FWYY - UYUSTOOLS</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>JABA DE POLLO VIVO LIVIANA POLIN C/CUÑA - POLINPLAST</td>
+            <td>110.0</td>
+        </tr>
+    
+        <tr>
+            <td>JABA P/PESACDO</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>JABONERA CISNE C/TAPA - POLINPLAST</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>JABONERA LOCK CON SUCCIÓN - BASA</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>JALADOR DE AGUA FLORA 34CM (INCLUYE VARILLA)</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>JALADOR DE AGUA FLORA 40 CM (INCLUYE VARILLA)</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA 1 LT DIAMANTE - GALESS EXPRESS</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA ACERO PESADA 1LT - ROMSA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA ACERO PESADA 2LT - ROMSA</td>
+            <td>57.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA ACERO PESADA 3LT - ROMSA</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA ACERO PESADA 4LT - ROMSA</td>
+            <td>90.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA ACERO PESADA 5LT - ROMSA</td>
+            <td>105.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA FLORENTINA MED - CID PLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA FREEZER MEDIDORA 0.5 LT -URPI</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA GRADUADA 1 L - BASA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA GRADUADA 2 L - BASA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA GRADUADA 500 ML - BASA</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA IDEAL N° 2.5 TRANSPARENTE C/TAPA COLOR - POLINPLAST</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA MANCORA - GALESS EXPRESS</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA MEDIDORA POLIN N° 1 C/TAPA - POLINPLAST</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA MEDIDORA POLIN N° 1 S/TAPA - POLINPLAST</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA MEDIDORA VENECIA - 1 LT. - COASPA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA MEDIDORA VENECIA COLORES - 1 LT. - COASPA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA POLIN N° 2.5 NEW TRANSPARENTE C/TAPA COLOR - POLINPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA TROPICAL 1.5 LT. - BASA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRA TROPICAL 2.5 L - BASA</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRAS 5 LT - COASPA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRO ACERO CHICO - ROMSA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRO ACERO MEDIANO - ROMSA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRO N° 112B - MELAFORM</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>JARRO N° 37 - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARRO SEMICUADRADO N° 13 - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>JARROS DE PORCELANA 11 ONZ. /LOONEY TUNES</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>JUEGO DE ALICATES DENACET X 3 PZAS - PERSA</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>JUEGO DE COLADORES X 3 UNID. - BASA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>JUEGO DE JARRAS MEDIDEORAS - COASPA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>KITBOX N°1 ALTA-6 L SURTIDO 2 - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>KLERAT</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>KNAUF PINTURA SPRAY COLOR MEDIUM GRAY 375ML - PERSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>KNAUF PINTURA SPRAY COLOR SILVER 375ML - PERSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>KRESSO USO DOMESTICO - PERSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>KRESSO USO DOMESTICO GL - PERSA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>LA BANDEJA /DIAMANTE - COASPA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>LAMINA 7747 - YANG</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>LAVATORIO URPI N° 36 - URPI</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>LECHONERA ACERO CHICA MODELO I - ROMSA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>LECHONERA ACERO GRANDE MODELO I - ROMSA</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>LENTES TRANSPARENTES MEDICOS KAZO - POWER ACOUSTIK</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>LIJA DE PARED N° 180</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>LIMPIA LUNAS - PROLIMSO</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>LIMPIAPARABRISAS, MANGO MADERA - PROLIMSO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>LIMPIATODO</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>LINTERNA DE MANO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>LINTERNA PORTATIL 1LED 0.5W METAL 2 PILAS NEGRO OPALUX - MIRALDI</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE ALLEN DELUXE CORTO 9PCS - UYUSTOOLS</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE DE VASO TIPO Y / 8-10-12 MM</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE DE VASO TIPO Y / 8-9-10 MM</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE TERMICA 2X32 AMP. TICINO ECO. - CFDA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE TÉRMICA 40" BT</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE TÉRMICA 63" BT</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE TERMICA STRONGER ALPHA 2X32 - CFDA</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>LLAVE TERMICA STRONGER ALPHA 2X60 - CFDA</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACA AVENA 3 OSITOS</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETA CORINTIA C/PLATO (PT) MARMOL - MAGICPLAST</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETA CORINTIA C/PLATO (PT) MARRON - MAGICPLAST</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETA CORINTIA C/PLATO (PT) PLATEADO - MAGICPLAST</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETA CORINTIA C/PLATO (PT) TAUPE - MAGICPLAST</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETA CORINTIA C/PLATO (PT) VERDE - MAGICPLAST</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACETERO 652705 - YANG</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACHETE "TRUSTOP" CAÑERO CON GANCHO</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACHETE "TRUSTOP" CAÑERO SIN GANCHO</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACHETE SABLE "TRUSTOP" CONFORT DE 22" (MANGO ROJO)</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>MACHETE SABLE TRAMONTINA 24"</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>MALLA CUADRADA GALVANIZADA, 1/2" X 1/2"</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>MALLA CUADRADA GALVANIZADA, 3/4" X 3/4"</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANDIL DE COCINA 80*70 CM CON DIBUJO - BUY&GO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANDIL DE MARROQUIN CHICO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANDIL DE MARROQUIN GRANDE</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANDIL DE MARROQUIN MEDIANO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANGO FORRADO CHINO - PROLIMSO</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANGO METÁLICO - PROLIMSO</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANGUERA</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>MANGUERA REFORZADA DE 5/8"</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANGUERA SIMPLE DE 5/8"</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>MANTEL (PARA MESA) 1.37 CM - BUY&GO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>MAQUINA AFEITAR GILLETTE PRESTO-3</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>MAQUINA DE COCER PARA COSTAL DEREK MOTOR</td>
+            <td>455.0</td>
+        </tr>
+    
+        <tr>
+            <td>MARROQUIN PARIS CENTAUR AZUL NAVY - MULTITOP</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>MARROQUIN PARIS CENTAUR CHOCOLATE - MULTITOP</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>MARROQUIN PARIS CENTAUR NEGRO - MULTITOP</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>MARROQUIN PARIS CENTAUR ROJO - MULTITOP</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>MARROQUIN VALENCE BLANCO OPTICO - MULTITOP</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>MASILLA PARA CALAMINA</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>MASTER BOX N° 14 HERRAMIENTAS - POLINPLAST</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>MASTER BOX N° 20 HERRAMIENTAS - POLINPLAST</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>MATAMOSCA</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>MATAMOSCA CON CRIA</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>MATATODO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>MEDIDOR DE AIRE 50 LB T/PCL METAL, AUTOTECH - POWER ACOUSTIK</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>MEDIDOR DE PRESION AIRE 120LB CUERPO DE METAL, AUTOTECH - POWER ACOUSTIK</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA DE PLASTICO CUADRADA - POLINPLAST</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA DIDACTICA NIÑA + 2 BANCO DIDACTICO - POLINPLAST</td>
+            <td>155.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA DIDACTICA NIÑO + 2 BANCO DIDACTICO - POLINPLAST</td>
+            <td>155.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA INKA CUADRADA 73 x 73 CM - POLINPLAST</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA KINDER - WMB</td>
+            <td>72.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA MAYA OVALADA - BASA</td>
+            <td>220.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA MIKA CUADRADA - BASA</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA MILANO - LUCKY HOME</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA NIDO CUADRADA - BASA</td>
+            <td>100.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA NIDO REDONDA - BASA</td>
+            <td>105.0</td>
+        </tr>
+    
+        <tr>
+            <td>MESA RATAN PINO - HERCUPLAST</td>
+            <td>135.0</td>
+        </tr>
+    
+        <tr>
+            <td>MI GATITO BAILARÍN - BASA</td>
+            <td>147.0</td>
+        </tr>
+    
+        <tr>
+            <td>MI PRIMER CONTROL REMOTO - BASA</td>
+            <td>33.0</td>
+        </tr>
+    
+        <tr>
+            <td>MI PRIMER MARTILLO MUSICAL - BASA</td>
+            <td>37.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PARA MESA N°6</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PLASTICO SUPER CLEAR 150 #06 - 0.12MM - MULTITOP</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PLASTICO SUPER CLEAR 150 #08 - 0.18MM - MULTITOP</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PLASTICO SUPER CLEAR 150 #10 - 0.22MM - MULTITOP</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PLASTICO SUPER CLEAR 150 #12 - 0.28MM - MULTITOP</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>MICA PLASTICO SUPER CLEAR 150 #14 - 0.33MM - MULTITOP</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>MINI BARQUITA #5 - KOSMO PLAST</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0037 CALIBRADOR MILIMETRICO (VERNEIR) - THAYMITZU</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0145 TIJERA P/PODAR DENTADA HOJA NEGRA - THAYMITZU</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0345 DISCOS FLAT 4.5¨ (80) - THAYMITZU</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0368. JUEGO DE BROCAS P/ ROTOMARTILLO - THAYMITZU</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0507 PISTOLA P/ REGAR 5 FUNCIONES - THAYMITZU</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0508 PISTOLA P/RGAR 7 FUNCIONES - THAYMITZU</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0556. PISTOLA P/ROCIAR PVC - THAYMITZU</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0831 SUPRESOR DE PICO 5 VIAS C/BOTON - THAYMITZU</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0836 MANGO PISTOLA - THAYMITZU</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>MK 0897 CORTA VIDRIO PROFESSIONAL - THAYMITZU</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>NA 069 ALICATE SACABOCADO DE 9¨ - THAYMITZU</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>NA 126 JGO DE LLAVE ALLEN PUNTA BOLA - THAYMITZU</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>NA 206 LIMA ESCOFINA - THAYMITZU</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>NA 238. EXTENSION TOMA CORRIENTE BLANCO/NEGRO - THAYMITZU</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>NYLON DE PESCA DE 0.50 mm x 100 m</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>ÑA PANCHA LAVALOZA LIMON 450G 12IT</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>ÑA PANCHA LAVALOZA LIMON 700G 12IT</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 16 - UNIVERSAL</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 18 - UNIVERSAL</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 20 - UNIVERSAL</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 22 - UNIVERSAL</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 24 - UNIVERSAL</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA ARROCERA DE ALUMINIO N° 26 - UNIVERSAL</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 16 - UNIVERSAL</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 18 - UNIVERSAL</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 20 - UNIVERSAL</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 22 - UNIVERSAL</td>
+            <td>32.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 24 - UNIVERSAL</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE N° 26 - UNIVERSAL</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO BOMBE X 12 PZAS DE N° 16 AL N° 26 - UNIVERSAL</td>
+            <td>175.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 16 - UNIVERSAL</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 18 - UNIVERSAL</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 20 - UNIVERSAL</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 22 - UNIVERSAL</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 24 - UNIVERSAL</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA ALUMINIO N° 26 - UNIVERSAL</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 14 - UNIVERSAL</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 16 - UNIVERSAL</td>
+            <td>13.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 18 - UNIVERSAL</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 20 - UNIVERSAL</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 22 - UNIVERSAL</td>
+            <td>23.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 24 - UNIVERSAL</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO CON ASA NEGRA N° 26 - UNIVERSAL</td>
+            <td>33.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO N° 50 - ASTRID</td>
+            <td>145.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLA DE ALUMINIO N° 60 - ASTRID</td>
+            <td>195.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLAS DE ALUMINIO</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>OLLAS PRIME+SARTEN JUST COOK 20+24CM</td>
+            <td>348.0</td>
+        </tr>
+    
+        <tr>
+            <td>ORGANIZADOR DE VIAJE</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>ORGANIZADOR LOCK MULTIUSO CON SUCCIÓN - BASA</td>
+            <td>37.0</td>
+        </tr>
+    
+        <tr>
+            <td>ORGANIZADOR MULTIUSOS C/ RUEDA - BASA</td>
+            <td>79.0</td>
+        </tr>
+    
+        <tr>
+            <td>PABILO #3 - TOÑITO</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>PABILO ALGODON MEDIANO - CFDA</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>PALANCA DE ENCOFRADOR O PATA DE CABRA 18/24" - BUY&GO</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>PALANCA DE ENCOFRADOR O PATA DE CABRA 18/30" - BUY&GO</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>PALLET EXP 1500 ECOFORTEX (PEAD) - BASA</td>
+            <td>195.0</td>
+        </tr>
+    
+        <tr>
+            <td>PALLET EXP 2000 (PP) - BASA</td>
+            <td>310.0</td>
+        </tr>
+    
+        <tr>
+            <td>PALLET ONE WAY 1500 ECOFORTEX (PEAD) - BASA</td>
+            <td>165.0</td>
+        </tr>
+    
+        <tr>
+            <td>PANERA ARUBA GRANDE PLUS C/TAPA - POLINPLAST</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAÑO AMARILLO (ABSORBENTE) - PROLIMSO</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAÑO DE COCINA 38 X 38 - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAÑOS MICROFIBRA</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPAGAYO - BLUE IMP.</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPEL ALUMINIO 5 METROS - MERLY - TOÑITO</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPEL HIGIENICO RESISTEMAX 2P - SUAVE 10*2</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPEL,ERA AUTOMATICA N° 2 - BASA</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA AUTOMATICA # 1 - BASA</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA AUTOMATICA # 2 - BASA</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA AUTOMÁTICA #2 C/LOGO - BASA</td>
+            <td>62.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA AUTOMATICO SINAI #30 MODELO R</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA BODEGUITA VAIVEN 35 L - BASA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA BODEGUITA VAIVEN AHORRA ESPACIO 25 L - BASA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA CALADA FLORENCIA - URPI</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA CALADA NAPOLES - LUCIAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA PEQUEÑA DURAPLAS</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA PLATINIUM - 10 L - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA PLATINIUM AZUL - 10 L - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA PLATINIUM ORO - 10 L - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA PLATINIUM ROSADO - 10 L - DURAPLAST</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA TORITO VAIVEN 60 L - BASA</td>
+            <td>70.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN #60 (63L)  - PROLIMSO</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN #90 (90L) - PROLIMSO</td>
+            <td>68.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN 10L COLORES ARCO IRIS - PROLIMSO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN 10L COLORES CÁLIDOS - PROLIMSO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN CLÁSICA 2000 20L - BASA</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERA VAIVEN CLÁSICA 4000 40 L - BASA</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 24 - POLINPLAST</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS GENERALES - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS METAL - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS ORGANICOS - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS PAPEL Y CARTON - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS PELIGROSOS - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS PLASTICO - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PAPELERO ARTUR N° 80 ECOLOGICO RESIDUOS VIDRIO - POLINPLAST</td>
+            <td>60.0</td>
+        </tr>
+    
+        <tr>
+            <td>PARAGUA 70*80K 8 - BUY&GO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>PASTILLA BAÑO X2 PINO CLASICA - VIRUTEX</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>PASTILLAS SURTIDAS C/E - PINO QUÍMICA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEGAMENTO - CHEMER - TOÑITO</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEGAMENTO AFRICANO 1/4</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEGAMENTO MAS AFRICANO 1/32</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEGAMENTO MAS AFRICANO 1/64</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>PERCHERO DE METAL 39CM</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>PERNOS DE ANCLAJE P/ INODORO C/ TARUGO S/MARCA - MIRALDI</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>PERNOS EN FORMA DE L</td>
+            <td>1.3</td>
+        </tr>
+    
+        <tr>
+            <td>PEROL DE ALUMINIO N° 28 - UNIVERSAL</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEROL DE ALUMINIO N° 32 - UNIVERSAL</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEROL DE ALUMINIO N° 36 - UNIVERSAL</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>PEROL DE ALUMINIO N° 40 - UNIVERSAL</td>
+            <td>52.0</td>
+        </tr>
+    
+        <tr>
+            <td>PILA AA - DURACELL</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>PILA AAA - DURACELL</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>PILA BATERIA DE 9V - DURACELL</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY ALUMINIO SILVER BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY AMARILLO CATARPELLIAR</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY BLANCO BRILLO BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY BLANCO MATE BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY NEGRO BRILLO BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY NEGRO MATE BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PINTURA SPRAY ROJO BRILLANTE BRAVO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PISO CAUCHO GRANDE - LUCIAPLAST</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>PISO PVC GRANDE - LUCIAPLAST</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>PISTOLA PARA SILICONA - KAZO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PISTOLA PARA SILICONA 20W - TROYA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>PISTOLA PEQUEÑA P/SILICONA "TOPEX" - ANDINO 15W - 110-240W - PERSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>plástico</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO BLANCO 26-2 (8.40X KILO)</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO DE POLIETILENO DE 1.60 CM DE ANCHO</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO DE POLIETILENO SIMPLE x 1.30 cm DE ANCHO</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO DE POLIETILENO SIMPLE x 1.30 cm DE ANCHO (PRIMERA)</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO DE POLIETILENO SIMPLE x 1.30 cm DE ANCHO (ROLLO x 50 Kg.)</td>
+            <td>380.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO DE POLIETILENO SIMPLE x 1.30 cm DE ANCHO (SEGUNDA)</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO DE 3 METROS DE ANCHO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO DE 4 METROS DE ANCHO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO DE 6 METROS DE ANCHO</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO X 2 METROS DE ANCHO</td>
+            <td>450.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO X 3 METROS DE ANCHO</td>
+            <td>450.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO X 4 METROS DE ANCHO</td>
+            <td>450.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO MARGARITO X 6 METROS DE ANCHO</td>
+            <td>520.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLASTICO SUPER CLEAR 150 #16 - 0.38MM - MULTITOP</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO BANDEJA CON TAPA DE TECNOPOR CT5</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO BANDEJA DE TECNOPOR</td>
+            <td>14.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE CERÁMICA 10" - BUY&GO</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA HONDO</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA HONDO (SOPERO 8 ECONOMICO HP)</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA HONDO (SOPERO 8)</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA HONDO N°12</td>
+            <td>70.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA SEMIHONDO</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO DE LOZA TENDIDO</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO HONDO DESCARTABLE DE TECNOPOR</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO HONDO LABRADO N° 225M - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO HONDO PLUS N° 22L - MELAFORM</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO PARA PERRO BONES TALLA L BASA PEST - BASA</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATO TENDIDO DE TECNOPOR</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLATRO DE LOSA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>PLUMON FAB 23 AZUL P REDON - FABER CASTELL (TL)</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>PLUMON FAB 23 NEGRO P REDON - FABER CASTELL (TL)</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>PLUMON FAB 23 ROJO P REDON - FABER CASTELL (TL)</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>PLUMON FAB 23 VERDE P REDON - FABER CASTELL (TL)</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>PLUMON FAB 421-M NEGRO - FABER CASTELL (TL)</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>POMO FORTE BAÑO BA-006 - FORTE</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO FORTE BAÑO BP-066 - FORTE</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO FORTE DORM AI-007 - FORTE</td>
+            <td>42.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO FORTE DORM BP-007 - FORTE</td>
+            <td>49.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO VIDRIO DAVOS 10 LT - PG</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO VIDRIO DECORADO 3 KG - PG</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>POMO VIDRIO SIN DECORAR 2 KG - PG</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PONCHERA ACERO #1 - ROMSA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>PONCHERA ACERO #2 - ROMSA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>PONCHERA ACERO #4 - ROMSA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>PONCHO DE LLUVIA ADULTO 200*130 CM</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>PONCHO DE LLUVIA P/ADULTO 130*100 CM</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>POR COMPRA VARIOS DE MATERISLES DE LIMPIEZA</td>
+            <td>55.5</td>
+        </tr>
+    
+        <tr>
+            <td>POR COMPRA VARIOS MATERIALES DE FERRETERIA</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTA CUBIERTO BOSTON TS - POLINPLAST</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTA PAPEL TOALLA LOCK CON SUCCIÓN - BASA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAROPA MAGIC (PT) AZUL ACERO CLARO - MAGICPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAROPA MAGIC (PT) CREMA - MAGICPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAROPA MAGIC (PT) NARANJA - MAGICPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAROPA MAGIC (PT) ROJO - MAGICPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAROPA MAGIC (PT) VERDE LIMON - MAGICPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA BUEN HOGAR</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA HOGAR GRANDE - POLINPLAST</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA HOGAR JUNIOR - POLINPLAST</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA JUMBO JIREH - MAGINSA</td>
+            <td>37.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA KILLAY - URPI</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>PORTAVAJILLA PREMIUM GRANDE - POLINPLAST</td>
+            <td>58.0</td>
+        </tr>
+    
+        <tr>
+            <td>POTASA CÁUSTICA</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>POTAVAJILLA - BLUE IMP.</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>PRACTIORGANIZADOR DE ESCRITORIO N° 4 - POLINPLAST</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>PRACTIORGANIZADOR DE ESCRITORIO N°3 - POLINPLAST</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>PRACTIORGANIZADOR DE ESCRITORIO N°5 - POLINPLAST</td>
+            <td>33.0</td>
+        </tr>
+    
+        <tr>
+            <td>PRENSADOR DE AJOS - BASA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>PULVERIZADOR</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>PULVERIZADOR A PRESIÓN HAMMER X 2 LT BLANCO</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>QUINUA AVENA 3 OSITOS</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>QUITASARRO</td>
+            <td>33.0</td>
+        </tr>
+    
+        <tr>
+            <td>RAFIA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>RALLADOR ACERO CHICO - ROMSA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>RALLADOR ACERO GRANDE - ROMSA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>RALLADOR ACERO MEDIANO - ROMSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>RASTRILLO DE MANO PARA JARDINERIA - BUY&GO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>RECOGEDOR DE METAL MEDIANA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>RECOGEDOR DE PLASTICO - BASA</td>
+            <td>11.0</td>
+        </tr>
+    
+        <tr>
+            <td>RECOGEDOR ECONÓMICO NEGRO, TUBO PVC GRIS - PROLIMSO</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>RECOGEDOR REINA CON FILETE DE GOMA, TUBO PVC BLANCO - PROLIMSO</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>REPISA ESQUINERO LOCK CON GANCHOS DE SUCCIÓN - BASA</td>
+            <td>37.0</td>
+        </tr>
+    
+        <tr>
+            <td>REPOSTERO AMERICANO (JGO. X4) - BASA</td>
+            <td>34.0</td>
+        </tr>
+    
+        <tr>
+            <td>REPOSTERO AMERICANO JUMBO - BASA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>REPOSTERO PRIMOR N° 5 - POLINPLAST</td>
+            <td>11.0</td>
+        </tr>
+    
+        <tr>
+            <td>REPOSTERO PRIMOR SET X 5 DECORADO - POLINPLAST</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>RESISTENCIA T/RESORTE LORENZETTI ORIG. - CFDA</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>ROCIADOR</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>RON DE QUEMAR X GL - QUIMVA</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>RON DE QUEMAR X LT. - QUIMVA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>SACUDIDOR CHICO - LUCIAPLAST</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>SACUDIDOR GRANDE - LUCIAPLAST</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>SACUDIDOR MEDIANO - LUCIAPLAST</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>SAP. PREM LUSTRAMUEB. CRE LAVANDA 280ML</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>SAPOLIO CERA PTA ROJA 300ML</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>SAPOLIO LAVAVAJILLAS LIMON 800GR</td>
+            <td>6.5</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN ANTIADHERENTE ROJO C/ESPATULA #20 - ROMSA</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN ANTIADHERENTE ROJO C/ESPATULA #22 - ROMSA</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN ANTIADHERENTE ROJO C/ESPATULA #24 - ROMSA</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN ANTIADHERENTE ROJO C/ESPATULA #26 - ROMSA</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN CERÁMICA VIELA C/TAPA GRIS #26 - ROMSA</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN CERÁMICA VIELA C/TAPA ROJO #26 - ROMSA</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN CERÁMICA VIELA GRIS #22 - ROMSA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN CERÁMICA VIELA GRIS #24 - ROMSA</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN CERÁMICA VIELA GRIS #26 - ROMSA</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>SARTEN DE TEFLON</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>SELLADORA BOLSA 10 CM ALUMINIO, SAMWIN - POWER ACOUSTIK</td>
+            <td>90.0</td>
+        </tr>
+    
+        <tr>
+            <td>SELLADORA BOLSA 20CM PLASTICO 220V-60HZ., KAZO - POWER ACOUSTIK</td>
+            <td>59.0</td>
+        </tr>
+    
+        <tr>
+            <td>SELLADORA DE BOLSAS 200MM PLAST SM</td>
+            <td>68.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET COCOLISO PARA NIÑO (RECOGEDOR + ESCOBA + BALDE + TRAPEADOR) - PROLIMSO</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE ALIMENTACIÓN DE VIAJE-PLATO 3 DIV + CUBIERTOS - BASA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE DULCERA CAJA COLORES X 6 PIEZAS</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE JARDINERIA 3 PCS - BUY&GO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE JARRA CON 6 VASOS RECTOS</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE LIMPIEZA REINA DE 18 L - PROLIMSO</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET DE LIMPPIEZA ECOLOGICO 15 L - DAYR</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET JARRA 4L TAPA COLOR +2 VASOS - URPI</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET JARRA 6602 - YANG</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET MANUELITO PARA NIÑO (ESCOBA + RECOGEDOR) - PROLIMSO</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET SWING (TRAPEADOR AUTOMÁTICO+BALDE ESCURRIDOR+RPTO MOPA) - PROLIMSO</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>SET SWING COLORS (TRAPEADOR AUTOMÁTICO + BALDE ESCURRIDOR + RPTO MOPA) - PROLIMSO</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>SIERRA CIRCULAR 1100W/185MM *DONGCHENG* - UYUSTOOLS</td>
+            <td>235.0</td>
+        </tr>
+    
+        <tr>
+            <td>SIERRA CIRCULAR 7 1/4" 1300W</td>
+            <td>315.0</td>
+        </tr>
+    
+        <tr>
+            <td>SIERRA CIRCULAR 9 1/4" 2300W</td>
+            <td>485.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILICONA EN BARRA</td>
+            <td>0.5</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA CON BRAZOS MONTREAL - BASA</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA CON BRAZOS SISSA - BASA</td>
+            <td>49.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA CUSCO /AZULINO - URPI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA CUSCO /CREMA - URPI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA CUSCO /VERDE TELEFÓNICA - URPI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA MAXI - WMB</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA MIMBRE RATAN - POLINPLAST</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA MONACO BLANCO/CREMA - POLINPLAST</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA MURCIA - BASA</td>
+            <td>49.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA NAZARET (CR, BL, TRQ) - MAGINSA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLA VICTORIA - LUCKY HOME</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLON CUMBIA - POLINPLAST</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLON CUMBIA BLANCO/CREMA - POLINPLAST</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILLON MIMBRE RATAN - POLINPLAST</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILVATO GRANDE</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>SILVATOS PEQUEÑO</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>SOCKET COLGANTE 9091 - PARMA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>SOLDIMIX 10 MINUTOS - PERSA</td>
+            <td>11.0</td>
+        </tr>
+    
+        <tr>
+            <td>SOMBRILLA 087 - YANG</td>
+            <td>28.0</td>
+        </tr>
+    
+        <tr>
+            <td>SOMBRILLA 088 - YANG</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>SOMBRILLA GRANDE DE 1.2M-CH</td>
+            <td>82.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 09 20X30CM EXTINTOR FIGURA BOTELLA S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 11 20X30CM BOTIQUIN PRIMEROS AUXILIOS S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 25 20X30CM SERVICIOS HIGIENICOS BAÑO S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 39 20X30CM SALIDA IZQUIERDA VERTICAL S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 47 20X30CM ZONA SEGURA EN CASO DE SISMOS S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 53 20X30CM LUCES DE EMERGENCIA S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>STICKER ADHES. 59 20X30CM AFORO CAPACIDAD PERSONAS S/MARCA - MIRALDI</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>SULFATO DE ALUMINIO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>SULFATO DE ALUMINIO B 500 C/E - PINO QUÍMICA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>SULFATO DE ALUMINIO TIPO A C/E - PINO QUÍMICA</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>SULFATO DE COBRE - PINO QUÍMICA</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER BANCO ESCALERA POLIN - POLINPLAST</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER BATEA OVALADA N° 120 PL - POLINPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER BATEA RECTANGULAR N° 120 - POLINPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER TACHO TORITO 170 LITROS - WMB</td>
+            <td>75.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER TINA REDONDA N° 120 - WMB</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>SUPER TINA REDONDA N° 80 - WMB</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICA 5308 - YANG</td>
+            <td>25.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICAR 5307 - YANG</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICAR C/BLANCO (19 X 31 X 0.7 CM) - COASPA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICAR C/BLANCO (24.5 X 38.5 X 0.70 CM) - COASPA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICAR MARBLE GRANDE-BASA</td>
+            <td>36.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA DE PICAR MARBLE MEDIANA-BASA</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>TABLA PARA CORTAR MEDIANA 34 X 25 cm - ILKO</td>
+            <td>19.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO CASERITO 90L - PROLIMSO</td>
+            <td>65.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO GORILA C/RUEDAS #240 - BASA</td>
+            <td>296.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO NISI #180 CON TAPA - MAGINSA</td>
+            <td>85.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO RECOLECTOR 120 C AMARILLO - DAYR</td>
+            <td>175.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO RECOLECTOR 120 C NEGRO - DAYR</td>
+            <td>170.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO TORITO DE 90 L - WMB</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO ZEUS N° 150 C/TAPA BOMBE - POLINPLAST</td>
+            <td>115.0</td>
+        </tr>
+    
+        <tr>
+            <td>TACHO ZEUS N° 150 C/TAPA PLANA - POLINPLAST</td>
+            <td>115.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER 1KG R1  - COASPA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER 67607 - YANG</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER 67608 - YANG</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CONTAINER POLIN N° 3 TRANSPARENTE - POLINPLAST</td>
+            <td>9.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CONTAINER POLIN N° 4 TRANSPARENTE - POLINPLAST</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CONTAINER POLIN N° 5 TRANSPARENTE - POLINPLAST</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CONTAINER POLIN N° 6 TRANSPARENTE - POLINPLAST</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CRYSTAL GLASS CUADRADO 790 ML GYG - BASA</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CRYSTAL GLASS RECTANGULAR 630 ML GYG - BASA</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER CRYSTAL GLASS REDONDO 940 ML GYG - BASA</td>
+            <td>16.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GALAXIA 2 KG TRANSPARENTE C/TAPA COLOR - POLINPLAST</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG CUADRADO 900 ML 152 X 152 X 127 N - BASA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG CURVE CUADRADO 670 ML - BASA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG CURVE RECTANGULAR 920 ML - BASA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG RECTANGULAR 1.1 L - BASA</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG RECTANGULAR 800 ML 108 X 160 X 75 N - BASA</td>
+            <td>10.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER GYG REDONDO 220 ML 105*105*50*N - BASA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER HERMÉTICO MULTIUSO 220 ML - BASA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER HERMETICOS TriteX 1.10 ml</td>
+            <td>24.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER ITALIANO 1 KG TRANSPARENTE C/TAPA COLOR - POLINPLAST</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER LOK-IT SPLIT  POLINPLAST</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER LOTTO 1.2 COLOR C/T COLOR - MAGINSA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER LOTTO 1.2 TRANSPARENTE C/T COLOR - MAGINSA</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER LOTTO X 2 TRANSPARENTE - MAGINSA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER LOTTO X 3 TRANSPARENTE - MAGINSA</td>
+            <td>7.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER REFRACT. C/T CUADR. 800 ML. (16150) (111)</td>
+            <td>15.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER REFRACT. RECT. 1040ML(14195-4S)(111)</td>
+            <td>17.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER REFRACT. RECT. C/T 1520ML (GB13G14220)(111)</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPER VENUS 1 KG TRANSPARENTE C/TAPA TRANSPARENTE</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPERS HERMETICOS MULTIUSOS 500 ml</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPETE BIENVENIDO RECTANGULAR 60*90 - DAYR</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAPON REJILLA BRONCE 2"</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA 18 OZ 3400</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA BLANCO 16 OZ</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA COLOR 17 OZ</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA CON PLATO C/D</td>
+            <td>50.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA CON PLATOS A RAYAS - GALESS EXPRESS</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA CUADRADA N° 10G - MELAFORM</td>
+            <td>1.5</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA DE CERÁMICA 10.5X11CM (13OZ MUG) - BUY&GO</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA DE CERÁMICA 11" - BUY&GO</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA FAMILIAR - MELAFORM</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA RECTA BLANCO 11 OZ</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZA RECTA NAVIDEÑA 11 OZ</td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZON COLADOR ITALIA NRO 1 (19.6 CM) - COASPA</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>TAZON COLADOR ITALIA NRO 2 (22.1 CM) - COASPA</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZON COLADOR ITALIA NRO 3 (24.7 CM) - COASPA</td>
+            <td>4.5</td>
+        </tr>
+    
+        <tr>
+            <td>TAZON MARTE - COASPA</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>TAZÓN OREJÓN MULTIUSOS TRASLÚCIDOS - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>TAZÓN TREBOL COLORES - GREEN PLASTIC</td>
+            <td>3.5</td>
+        </tr>
+    
+        <tr>
+            <td>TBL 1234 BOYA P/DEPOSITO D/AGUA 1/2 Y 3/4 C/BRAZO EN LATÓN ASTRA - MIRALDI</td>
+            <td>30.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO 1.8 LT ESCOCES</td>
+            <td>132.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO ACERO 500 ML COLORES</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO BASA AVA 1.8 L - BASA</td>
+            <td>58.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO BASA CLASSIC 1 L - BASA</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO BASA CLASSIC 3.2 L - BASA</td>
+            <td>80.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO BASA CLASSIC BEBE 1L - BASA</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO BASA CLASSIC BEBÉ 500 ML - BASA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO DECORA 1.8 L - BASA</td>
+            <td>48.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO SIFON 3.2 LT PLATEADO - GEX</td>
+            <td>78.0</td>
+        </tr>
+    
+        <tr>
+            <td>TERMO VERSA 1 L - BASA</td>
+            <td>38.0</td>
+        </tr>
+    
+        <tr>
+            <td>TETERA ACERO 2LT - ROMSA</td>
+            <td>26.0</td>
+        </tr>
+    
+        <tr>
+            <td>TETERA ACERO 3LT - ROMSA</td>
+            <td>29.0</td>
+        </tr>
+    
+        <tr>
+            <td>TETERA ACERO 4LT - ROMSA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>TETERA ACERO 5LT - ROMSA</td>
+            <td>40.0</td>
+        </tr>
+    
+        <tr>
+            <td>TETERA ACERO M/PASANTE 7LT - ROMSA</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>TIMBRE INDUSTRIAL REDONDO 4" 220V AC OPALUX - MIRALDI</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>TINA 100 PODEROSO AZUL - DURAPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>TINA 100 PODEROSO GUINDA - DURAPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>TINA 100 PODEROSO VERDE - DURAPLAST</td>
+            <td>55.0</td>
+        </tr>
+    
+        <tr>
+            <td>TINA BASA CON JABONERA CIRCULAR</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>TINA CANOA N° 20 - LUCKY HOME</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOALLA DE MICROFIBRA 40X80CM - BUY&GO</td>
+            <td>8.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOALLA DE MICROFIBRA 60X120CM - BUY&GO</td>
+            <td>12.0</td>
+        </tr>
+    
+        <tr>
+            <td>TOMACORRIENTE TRIPLE PARA SOBREPONER PS-78 - PARMA</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>TRANSPORTADOR DE MASCOTAS ZEPHOS 1 - BASA</td>
+            <td>90.0</td>
+        </tr>
+    
+        <tr>
+            <td>TRAPEADOR</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>TRAPEADOR TWIST, MANGO METALICO - PROLIMSO</td>
+            <td>22.0</td>
+        </tr>
+    
+        <tr>
+            <td>UNIÓN UNIVERSAL DE PVC C/ROSCA 1/2</td>
+            <td>3.0</td>
+        </tr>
+    
+        <tr>
+            <td>UTILITARIO DIAMANTE - COASPA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>VALVULA PVC 1/2 C/ROSCA - CFDA</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO 400 ML COLORES TRASLUCIDO SIN DISEÑO - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO 400 ML COLORES TRASLUCIDO SIN DISEÑO CON TAPA - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO 8 OZ. VIDRIO COMERCIAL #3217108 (111)</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO 8 OZ. VIDRIO FIESTA #3147008 (111)</td>
+            <td>1.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO CHOPP IMPORTADO (CON ASA)</td>
+            <td>4.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO DE VIDRIO WISKERO NORTON - PG</td>
+            <td>6.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO DESCARTABLE DE 6.5 Oz.</td>
+            <td>5.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO ILUSION CRISTAL COLORES JR - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO ILUSIÓN CRISTAL JR TRANSPARENTE - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO KERO CRISTAL COLORES - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO KERO CRISTAL TRANSPARENTE - JJ PLASTIC</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO LICUADORA BCLEAR 1.25L</td>
+            <td>20.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO LISBOA 11 OZ (ZAFIRO)</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO SODERA "2805AL" 2 3/4 OZ (PISQUERO)</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VASO VENCEDOR "COCO"</td>
+            <td>0.0</td>
+        </tr>
+    
+        <tr>
+            <td>VELA SAN JUAN E 4E GRANDE X 4 UNID</td>
+            <td>2.5</td>
+        </tr>
+    
+        <tr>
+            <td>VELA SAN JUAN R 4R MEDIANA X 4 UNID</td>
+            <td>2.0</td>
+        </tr>
+    
+        <tr>
+            <td>VERDULERO MEDIANO APILABLE JGO X 3 EMBALADO - URPI</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>VERDULERO X4 APILABLE - COASPA</td>
+            <td>35.0</td>
+        </tr>
+    
+        <tr>
+            <td>VINO BORGOÑA TABERNERO / 2 LITROS - CORP. BUENA VENTURA </td>
+            <td>39.0</td>
+        </tr>
+    
+        <tr>
+            <td>WISEUP BALANZA COLGANTE 100 KG - BUY&GO</td>
+            <td>45.0</td>
+        </tr>
+    
+        <tr>
+            <td>WISEUP GUANTES DE SOLDADOR 14"/350MM - BUY&GO</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>WISEUP LLAVE (FRANCESA) AJUSTABLE PROFESIONAL 8"/200MM - BUY&GO</td>
+            <td>18.0</td>
+        </tr>
+    
+        <tr>
+            <td>ZAPAPICO "TRUSTOP" 5 LBS</td>
+            <td>35.0</td>
+        </tr>
+    
+    </table>
+
+    <script>
+        // Función de búsqueda
+        function searchProduct() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchBox");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("productTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Recorremos todas las filas de la tabla (empezando desde la segunda fila)
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                if (td) {
+                    txtValue = td[0].textContent || td[0].innerText; // Buscar en la primera columna (item)
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
